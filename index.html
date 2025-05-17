@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Full width sections with padding */
+    section {
+      width: 100%;
+      padding: 100px 20px; /* top/bottom 100px, left/right 20px */
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    /* Background colors & text colors */
+    #home { background-color: #1f1e1e; color: #f0f8ff; }
+    #about { background-color: #222; color: #f0f8ff; }
+    #projects { background-color: #333; color: #f0f8ff; }
+    #contact { background-color: #444; color: #f0f8ff; }
+
+    /* Center text for About, Projects, Contact */
+    #about, #projects, #contact {
+      text-align: center;
+    }
+
+    /* Hero section flex layout */
+    #home {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    @media (min-width: 992px) {
+      #home {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    /* Hero text styling */
+    .hero-text h5 span {
+      color: #007ced;
+    }
+
+    /* Make sure hero pic doesn't shrink */
+    .hero-pic img {
+      max-width: 300px;
+      border-radius: 50%;
+      border: 5px solid #f0f8ff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    /* Project cards bg */
+    .card.bg-dark {
+      background-color: #222;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <i class="fas fa-user-circle me-2"></i>
+        <span>MyPortfolio</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="hero-text">
+      <h5>Hello, I'm <span>Web Developer</span></h5>
+      <h2>Godwin Villanueva</h2>
+      <p>Passionate about building responsive and modern web applications.</p>
+      <div class="btn-group">
+        <a href="#contact" class="btn btn-outline-light me-2">Hire Me</a>
+        <a href="#projects" class="btn btn-primary">Projects</a>
+      </div>
+      <div class="social mt-3">
+        <a href="https://www.facebook.com/share/16boDZnWSo/"><i class="fab fa-facebook-f me-3"></i></a>
+        <a href="https://www.instagram.com/jam_kingsberry/"><i class="fab fa-instagram me-3"></i></a>
+        
+      </div>
+    </div>
+    <div class="hero-pic">
+      <img src="mypic.jpg" alt="profile" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+   <p>I am a graduate of Don Mariano Marcos Memorial State University with extensive experience in creating aesthetically pleasing and user-friendly websites. I specialize in HTML, CSS, SCSS, JavaScript, PHP, and Vue.js. Additionally, I am proficient in designing intuitive UI/UX interfaces using Figma and conducting comprehensive software testing with Jira. I am passionate about transforming ideas into functional solutions while continuously striving to learn new technologies and enhance my expertise.</p>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects">
+    <h2 class="text-center mb-4">Projects / Work Experience</h2>
+    <div class="row justify-content-center">
+      <!-- Project 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card bg-dark text-light">
+          <img src="" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Part Time Fullstack Web Programmer and Figma Designer</h5>
+            <p class="card-text">Part time programmer, Create Student's Projects or other campus system. </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject1">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card bg-dark text-light">
+          <img src="" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Automated Recruitment System</h5>
+            <p class="card-text">A Thesis System Built for automation system based recruitment system</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject2">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card bg-dark text-light">
+          <img src="" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">First Job Experience</h5>
+            <p class="card-text">Arthur John Collection Agency Inc.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject3">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modalProject1" tabindex="-1" aria-labelledby="modalProject1Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalProject1Label">Part Time Fullstack Web Programmer</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="" class="img-fluid mb-3" alt="" />
+            <p>During my time as a part-time fullstack web programmer, I worked on various academic and small business systems, providing both functional development and user interface design. Some of the key projects I contributed to include:</p>
+            <ul>
+              <li><strong>Doctors Appointment System</strong> – A web-based appointment system developed for the DMMMSU Clinic to streamline patient scheduling.</li>
+              <li><strong>Scheduling System</strong> – A comprehensive system for managing class schedules involving teachers, students, subjects, and rooms, with Excel-based output to minimize schedule conflicts.</li>
+              <li><strong>Avon Shop Inventory</strong> – An inventory management system designed for a local Avon shop to monitor stocks and transactions efficiently.</li>
+              <li><strong>Happy Sip Resto</strong> – Created a user interface and user experience (UI/UX) mobile application design for menu and ordering services.</li>
+              <li><strong>Other IT/CS-related student projects</strong> – Assisted with various coding and design tasks for capstone and thesis systems, tailored to meet academic project requirements.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <!-- Modal 2 -->
+<div class="modal fade" id="modalProject2" tabindex="-1" aria-labelledby="modalProject2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl"> <!-- use modal-xl for better width -->
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProject2Label">Automated Recruitment System</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <iframe src="ars.pdf" type="application/pdf" allowfullscreen></iframe>
+          </div>
+          <p>This system was developed as a thesis project to automate the recruitment process. It includes functionalities such as applicant screening, automated notifications, and resume management using PHP, MySQL, Bootstrap, and JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+   <!-- Modal 3 -->
+<div class="modal fade" id="modalProject3" tabindex="-1" aria-labelledby="modalProject3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalProject3Label">Collection Specialist</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>As a Collection Specialist, I developed and refined a diverse set of skills to ensure effective and professional debt recovery. My core competencies include:</p>
+        <ul>
+          <li><strong>Debt Collection via Phone Calls</strong> – Effectively contacted customers through outbound calls to remind, follow up, and encourage timely payments in a respectful and solution-focused manner.</li>
+          <li><strong>Receipt Generation with Microsoft Excel</strong> – Created detailed and accurate receipts using MS Excel for proper documentation and tracking of collected payments.</li>
+          <li><strong>Excellent Communication Skills</strong> – Maintained clear, polite, and professional communication with clients, ensuring a positive experience while handling sensitive financial matters.</li>
+          <li><strong>Customer Negotiation</strong> – Persuaded customers to settle outstanding balances through flexible terms, offering support while maintaining company collection policies.</li>
+          <li><strong>Strong Knowledge of Collection Processes</strong> – Gained a solid understanding of the full collection cycle, legal considerations, and effective recovery strategies.</li>
+          <li><strong>Computer Literacy</strong> – Proficient in using various office tools and software, including MS Office applications, CRM platforms, and call management systems to enhance work productivity and accuracy.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+  
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container text-center">
+    <h2>Contact Me</h2>
+    <p class="mb-4">Feel free to reach out for collaborations, project inquiries, or just to say hello!</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <ul class="list-unstyled text-start fs-5">
+          <li class="mb-3">
+            <i class="fas fa-phone-alt me-2 text-primary"></i> <!-- Phone Icon -->
+            <span>+639543276582</span>
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-envelope me-2 text-danger"></i> <!-- Gmail Icon -->
+            <span>godwinvillanueva790@gmail.com</span>
+          </li>
+          <li class="mb-3">
+            <i class="fab fa-facebook-f me-2 text-primary"></i> <!-- Facebook Icon -->
+            <span><a href="https://www.facebook.com/share/16boDZnWSo/" class="text-light text-decoration-none">Go to Godwin's Facebook Profile</a></span>
+          </li>
+          <li class="mb-3">
+            <i class="fab fa-instagram me-2 text-warning"></i> <!-- Instagram Icon -->
+            <span><a href="https://www.instagram.com/jam_kingsberry/" class="text-light text-decoration-none">Go to Godwin's Instagram Profile</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
